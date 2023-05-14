@@ -1,0 +1,15 @@
+{
+    "particle": {
+        "minRadius": "2",
+        "maxRadius": "4",
+        "minHeroWidth": "0",
+        "maxHeroWidth": "1800",
+        "minHeroHeight": "0",
+        "maxHeroHeight": "800",
+        "speed": "0.5",
+        "color": "rgb(255,255,255,0.4)"
+    }
+}
+
+
+
