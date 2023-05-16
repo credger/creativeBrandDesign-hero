@@ -1,11 +1,16 @@
 {
     "particle": {
-        "minRadius": 4,
-        "maxRadius": 8,
+        "minRadius": 2,
+        "maxRadius": 6,
         "speed": 0.5,
         "color": "rgb(255,255,255,0.4)",
         "display": true
+    },
+
+    "canvas": {
+        "pixelsPerParticle": 25920
     }
+
 }
 
 

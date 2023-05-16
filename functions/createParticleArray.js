@@ -1,9 +1,13 @@
 import particle from "../classes/classParticle.js"
 
-function createParticleArray(n) {
+const createParticleArray = (pixelsPerParticle) => {
+
+    const totalPixels = screen.width*screen.height
+    const numberParticles = Math.floor(totalPixels / pixelsPerParticle)
+    console.log('numberParticles: ', numberParticles)
 
     const particleArray = new Array()
-    for(let i=0; i<n; i++){
+    for(let i=0; i<numberParticles; i++){
         particleArray.push(new particle)
     }
 

@@ -3,9 +3,9 @@ import createParticleArray from "./functions/createParticleArray.js";
 import setCanvasDimensions from "./setCanvasDimensions.js";
 import addParticleLines from "./functions/addParticleLines.js";
 import addParticles from "./functions/addParticles.js";
+import heroConfig from "../heroConfig.json" assert {type: 'json'}
 
-
-const particleArray = createParticleArray(80)
+const particleArray = createParticleArray(heroConfig.canvas.pixelsPerParticle)
 
 const drawCanvas = () => {
 
@@ -24,3 +24,4 @@ const drawCanvas = () => {
 }
 
 drawCanvas()
+
