@@ -2,7 +2,7 @@ import addParticleVelocity from "./addParticleVelocity.js"
 import setParticleDisplay from "./setParticleDisplay.js"
 
 const addParticles = (particleArray, canvasContext) => {
-
+    
     particleArray.forEach((particle) => {
         setParticleDisplay(particle)
 
@@ -14,3 +14,5 @@ const addParticles = (particleArray, canvasContext) => {
 }
 
 export default addParticles
+
+
