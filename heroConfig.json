@@ -19,7 +19,7 @@
 
 
     "canvas": {
-        "pixelsPerParticle": 15000
+        "pixelsPerParticle": 14000
     }
 
 }

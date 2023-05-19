@@ -33,4 +33,3 @@ const addParticleLines = (particleArray, canvasContext) => {
 export default addParticleLines
 
 
-//"rgb(255,255,255,"+opacity+")"
