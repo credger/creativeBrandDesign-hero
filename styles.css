@@ -5,6 +5,7 @@ body{
 #hero {
     height: 88vh;
     display: flex;
+    justify-content: center;
     align-items: center;
     color: #fff;
     background: linear-gradient(45deg, #fe802d 8%, #fe0840 50%, #ac0bd9 90%);
@@ -12,6 +13,8 @@ body{
 
 #swoopingLinesSvg {
     position: absolute;
-    bottom: 0px;
-    left: 0px;
+    object-fit: cover;
+    opacity: 0.7;
+    min-width: 1250px;
 }
+
