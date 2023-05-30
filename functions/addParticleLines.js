@@ -1,9 +1,9 @@
-import heroConfig from "../heroConfig.json" assert {type: 'json'}
+import canvasConfig from "../canvasConfig.js"
 
 const addParticleLines = (particleArray, canvasContext) => {
 
-    const maxLineDistance = heroConfig.particleLines.maxLineDistance
-    const maxOpacity = heroConfig.particleLines.maxOpacity
+    const maxLineDistance = canvasConfig.particleLines.maxLineDistance
+    const maxOpacity = canvasConfig.particleLines.maxOpacity
  
     for(let i=0; i<particleArray.length; i++){
         for(let j=i+1; j<particleArray.length; j++){

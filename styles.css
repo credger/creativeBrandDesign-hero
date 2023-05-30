@@ -1,8 +1,21 @@
+@font-face {
+    font-family: 'Metropolis';
+    src: url('./assets/Metropolis-Regular.woff2') format('woff2');
+}
+
+@font-face{
+    font-family: 'Metropolis-Light';
+    src: url('./assets/Metropolis-Light.woff2') format('woff2');
+
+}
+
 body{
     margin: 0;
+    color: #fff;
 }
 
 main{
+    position: relative;
     height: 100vh;
     overflow-y: scroll;
 }
@@ -12,15 +25,187 @@ main{
     width: 100%;
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #fff;
     background: linear-gradient(45deg, #fe802d 8%, #fe0840 50%, #ac0bd9 90%);
 }
 
-/* #canvas{
-    display: none;
-} */
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6.1vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+#logo{
+    position: relative;
+    height: 3.6vh;
+    margin-left: calc(2% + 3px);
+}
+
+#logo:hover{
+    cursor: pointer;
+}
+
+#menu{
+    position: relative;
+    height: 18px;
+    width: 32px;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.menuRow{
+    height: 2px;
+    width: 100%;
+}
+
+#menuIconRowOneVisible{
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    transition: all 0.2s linear;
+}
+
+#menuIconRowOneHidden{
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: calc(-100% - 5px);
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    transition: all 0.2s linear;
+}
+
+#menuIconRowTwoVisible{
+    display: block;
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0%;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    transition: all 0.2s linear;
+    transition-delay: 0.1s;
+}
+
+#menuIconRowTwoHidden{
+    display: block;
+    position: absolute;
+    top: calc(50% - 1px);
+    left: calc(-100% - 5px);
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    transition: all 0.2s linear;
+    transition-delay: 0.1s;
+}
+
+#menuIconRowThreeVisible{
+    display: block;
+    position: absolute;
+    left: 0%;
+    top: calc(100% - 2px);
+    height: 2px;
+    width: calc(100% - 10px);
+    background: #fff;
+    transition: all 0.2s linear;
+    transition-delay: 0.2s;
+}
+
+#menuIconRowThreeHidden{
+    display: block;
+    position: absolute;
+    top: calc(100% - 2px);
+    left: calc(-100% - 5px);
+    height: 2px;
+    width: calc(100% - 10px);
+    background: #fff;
+    transition: all 0.2s linear;
+    transition-delay: 0.2s;
+}
+
+#menu:hover{
+    cursor: pointer;
+}
+
+
+#menu:hover #menuIconRowOneVisible{
+    left: calc(100% + 5px);
+}
+
+#menu:hover #menuIconRowOneHidden{
+    left: 0%;
+}
+
+#menu:hover #menuIconRowTwoVisible{
+    left: calc(100% + 5px);
+}
+
+#menu:hover #menuIconRowTwoHidden{
+    left: 0%;
+}
+
+#menu:hover #menuIconRowThreeVisible{
+    left: calc(100% + 5px);
+}
+
+#menu:hover #menuIconRowThreeHidden{
+    left: 10px;
+}
+
+#canvas{
+    position: absolute;
+}
+
+
+#heroContent{
+    width: 90%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+}
+
+
+#heroContent h1{
+    font-family: Metropolis, sans-serif;
+    font-size: 40.5px;
+    text-transform: uppercase;
+    letter-spacing: 5.7px;
+    font-weight: 600;
+    margin: 0;
+}
+
+#heroContent p{
+    font-family: Metropolis-Light, sans-serif;
+    font-size: 19.8px;
+    letter-spacing: 0.55px;
+    font-weight: 300;
+    margin: 13px 0px 0px 0px;
+}
+
+
 
 #waveBottom{
     position: absolute;
@@ -44,10 +229,214 @@ main{
     background-repeat: no-repeat;
 }
 
+#buttonContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 584px;
+    margin-top: 21px;
+}
+
+.buttons{
+    font-weight: 300;
+    width: 278px;
+    height: 53px;
+    z-index: 1;
+}
+
+.buttonVisible{
+    position: relative;
+    font-family: Metropolis-Light, sans-serif;
+    font-size: 16.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1.5px solid #fff;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    transition: all 0.2s ease-in;
+}
+
+.buttonHidden{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 0%;
+    top: 0%;
+    border: 2px solid #fff;
+    opacity: 0%;
+    transition: all 0.2s ease-in;  
+}
+
+.buttons:hover{
+    cursor: pointer;
+}
+
+.buttons:hover > .buttonVisible{
+    top: -100%;
+    opacity: 0%;
+
+}
+
+.buttons:hover > .buttonHidden{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    top: -100%;
+    opacity: 100%;
+}
+
+#leftButtonHidden{
+    height: 24px;
+    width: 24px;
+}
+
+#rightButtonHidden{
+    height: 24px;
+    width: 24px;
+}
+
+
+.svgOne{
+    animation-duration: 0.75s;
+    animation-name: increaseOpacity;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.75,0,.125,1);
+    fill: #fff;
+}
+
+.svgTwo{
+    animation-duration: 0.75s;
+    animation-name: decreaseOpacity;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.75,0,.125,1);
+    fill: #fff;
+}
+
+
+@keyframes increaseOpacity{
+    from{
+        opacity: 0.2;
+    }
+
+    to{
+        opacity: 0.9;
+    }
+}
+
+@keyframes decreaseOpacity{
+    from{
+        opacity: 0.9;
+    }
+
+    to{
+        opacity: 0.2;
+    }
+}
+
+
+#popUp{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0,0,0,0.7);
+    z-index: 101;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#popUpMessage{
+    width: 80%;
+    max-width: 580px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    word-break: break-word;
+
+}
+
+
+#popUpHeading{
+    color: black;
+    font-family: Metropolis, sans-serif;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+    margin-bottom: -20px;
+    text-transform:none;
+}
+
+#popUpText{
+    font-family: Metropolis, sans-serif;
+    color: black;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-top: 40px;
+}
+
+#popUpButtonContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    row-gap: 24px;
+}
+
+.popUpButton{
+    width: 80%;
+    max-width: 200px;
+    color: black;
+    font-family: Metropolis, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color: #E0E0E0;
+    border: solid 2px black;
+    border-radius: 15px;
+    margin: 0px 10px 0px 10px;
+    padding: 10px 10px;
+}
+
+.popUpButton:hover{
+    cursor: pointer;
+    background-color: #C0C0C0;
+}
+
+
+
 #footer{
     height: 50vh;
     width: 100%;
     background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footerText{
+    font-family: Metropolis, sans-serif;
+    font-size: 20px;
+    color: #606060;
+    margin: 0px 20px 0px 20px;
+
 }
 
 ::-webkit-scrollbar {
@@ -58,4 +447,103 @@ main{
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(0deg,#cc4bdd 20%,#e45f8a 75%,#fe7531 100%);
     transition: .3s background-color;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    #logo{
+        position: relative;
+        height: 16vw;
+        max-height: 3.6vh;
+        margin-left: calc(2% + 3px);
+    }
+
+    #heroContent{
+        width: 90%;
+        max-width: 1100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: left;
+    }
+    
+
+    #heroContent h1{
+        font-family: Metropolis, sans-serif;
+        font-size: 32px;
+        text-transform: uppercase;
+        letter-spacing: 4.7px;
+        line-height: 1.25;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    #heroContent p{
+        font-family: Metropolis-Light, sans-serif;
+        font-size: 16px;
+        letter-spacing: 0.40px;
+        line-height: 1.75;
+        font-weight: 300;
+        margin: 8px 0px 0px 0px;
+    }
+
+    #buttonContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 24px;
+        width: 100%;
+        max-width: 440px;
+        margin-top: 16px;
+    }
+
+    .buttons{
+        font-weight: 300;
+        width: 210px;
+        height: 40px;
+        z-index: 1;
+    }
+
+    .buttonVisible{
+        position: relative;
+        font-family: Metropolis-Light, sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        font-weight: 300;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1.5px solid #fff;
+        height: 100%;
+        width: 100%;
+        top: 0%;
+        transition: all 0.2s ease-in;
+    }
+
+
+    #swoopingLines{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-attachment: fixed;
+        background-image: url(./assets/lines-bg.svg);
+        opacity: 0.7;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: none;
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+        background-color: black;
+        display: none;
+    }
+
 }

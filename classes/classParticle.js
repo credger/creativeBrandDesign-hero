@@ -1,18 +1,18 @@
 import getRandomIntInclusive from "../functions/getRandomIntInclusive.js";
 import getRandomArbitrary from "../functions/getRandomArbitray.js";
 import getRandomSign from "../functions/getRandomSign.js";
-import heroConfig from "../heroConfig.json" assert {type: 'json'}
+import canvasConfig from "../canvasConfig.js";
 
 class particle {
     constructor(){
-        this.radius = getRandomArbitrary(heroConfig.particle.minRadius, heroConfig.particle.maxRadius)
+        this.radius = getRandomArbitrary(canvasConfig.particle.minRadius, canvasConfig.particle.maxRadius)
         this.x = getRandomIntInclusive(0, screen.width)
         this.y = getRandomIntInclusive(0, screen.height)
-        this.speed = heroConfig.particle.speed
+        this.speed = canvasConfig.particle.speed
         this.vx = getRandomArbitrary(0,this.speed)*getRandomSign()
         this.vy = Math.sqrt(this.speed**2 - this.vx**2)*getRandomSign()
-        this.color = heroConfig.particle.color
-        this.display = heroConfig.display
+        this.color = canvasConfig.particle.color
+        this.display = canvasConfig.display
     }
     
     draw(canvasContext) {

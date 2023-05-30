@@ -9,13 +9,49 @@
     <script type="module" src="script.js" defer></script>
 </head>
 <body>
-    <main>
+    <main id="main">
+        <header>
+            <img id="logo" src = "./assets/cbd-logo.webp" alt="logo"/>
+            <div id="menu"></div>
+        </header>
         <section id="hero">
             <canvas id="canvas"></canvas>
+            <div id="heroContent">
+                <h1>Web Design Agency</h1>
+                <p>We are an Award Winning Web Design Agency based in London.</p>
+                <div id="buttonContainer">
+                    <div id="leftButton" class='buttons'>
+                        <div class="buttonVisible">View our Portfolio</div>
+                        <div class = "buttonHidden">
+                            <svg id="leftButtonHidden"></svg>
+                        </div>
+                    </div>
+                    <div id="rightButton" class="buttons">
+                        <div class="buttonVisible">Start a Project</div>
+                        <div class = "buttonHidden">
+                            <svg id = "rightButtonHidden"></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="swoopingLines"></div>
             <svg id="waveBottom"></svg>
         </section>
-        <footer id="footer"></footer>
+        <footer id="footer">
+            <p id="footerText">Cloned from <a href="https://www.cbwebsitedesign.co.uk">Creative Brand Design</a> by Clyde Redger</p>
+        </footer>
+        <div id="popUp">
+            <div id="popUpMessage">
+                <h1 id="popUpHeading">Thank you for visiting!</h1>
+                <p id="popUpText">This project is limited to the hero section.  You can view the full website at
+                    <a href="https://www.cbwebsitedesign.co.uk">www.cbwebsitedesign.co.uk</a>.
+                </p>
+                <div id="popUpButtonContainer">
+                    <button id ='popUpCloseButton' class="popUpButton">Close</button>
+                    <button class="popUpButton" onclick="location.href='https://www.cbwebsitedesign.co.uk'">Take me there!</button>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 </html>
