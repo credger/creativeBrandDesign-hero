@@ -12,9 +12,6 @@ const addButtonContents = () => {
     square2.setAttribute("class", 'svgTwo')
     leftButtonHidden.appendChild(square2)
 
-
-
-
     const rightButtonHidden = document.getElementById('rightButtonHidden')
     rightButtonHidden.setAttribute('viewBox', '0 0 512 512')
 

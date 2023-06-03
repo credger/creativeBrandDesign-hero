@@ -4,9 +4,6 @@ import createMenuIcon from "./functions/createMenuIcon.js";
 import drawCanvas from "./functions/drawCanvas.js";
 import handleClick from "./functions/handleClick.js";
 import closePopUp from "./functions/closePopUp.js";
-import getButtonArea from "./functions/detectMouseOnButton.js";
-
-
 
 
 drawCanvas()

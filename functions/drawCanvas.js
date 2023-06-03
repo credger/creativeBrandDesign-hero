@@ -7,13 +7,14 @@ import addLinesOnMouseMove from "./addLinesOnMouseMove.js";
 import getMousePosition from "./getMousePosition.js";
 
 
+
 const drawCanvas = () => {
 
     const particleArray = createParticleArray(canvasConfig.canvas.pixelsPerParticle)
     const canvas = document.getElementById('canvas')
     const canvasContext = canvas.getContext("2d");
     const mousePosition = getMousePosition()
-   
+
     const runAnimation = () => {
         setCanvasDimensions()
         addParticles(particleArray, canvasContext)

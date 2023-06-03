@@ -3,6 +3,7 @@ const getMousePosition = () => {
     let mousePosition = {
         x: null,
         y: null,
+        screenX: null
     }
 
     document.addEventListener('mousemove', (event) => {

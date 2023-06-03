@@ -1,8 +1,7 @@
-
 const detectMouseOnButton = (mousePosition) => {
     const array = ['logo', 'menu', 'leftButton', 'rightButton']
 
-    let onButton = false
+    let mouseOnButton = false
 
     for(let i=0; i<array.length; i++){
         let element = document.getElementById(array[i])
@@ -14,13 +13,13 @@ const detectMouseOnButton = (mousePosition) => {
        
         if(mousePosition.x > xmin && mousePosition.x < xmax &&
             mousePosition.y > ymin && mousePosition.y <ymax){
-                onButton = true
+                mouseOnButton = true
                 break
         }
 
     }
 
-    return onButton
+    return mouseOnButton
 
 }
 
