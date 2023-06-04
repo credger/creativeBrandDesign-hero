@@ -19,7 +19,7 @@ const canvasConfig =
 
         "mouseLines": {
             "maxLineDistance": 300,
-            "opacity": 0.4
+            "maxOpacity": 0.4
         },
 
 
