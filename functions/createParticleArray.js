@@ -13,5 +13,4 @@ const createParticleArray = (pixelsPerParticle) => {
 
     return particleArray
 }
-
 export default createParticleArray

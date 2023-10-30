@@ -401,25 +401,24 @@ header{
 }
 
 .popUpButton{
-    width: 80%;
-    max-width: 200px;
-    color: black;
+    width: 100px;
+    height: 40px;
+    color: white;
+    background-color: black;
     font-family: Metropolis, sans-serif;
     font-weight: 400;
     font-size: 18px;
     letter-spacing: 1px;
-    background-color: #E0E0E0;
-    border: solid 2px black;
-    border-radius: 15px;
+    border: 1px solid black;
+    border-radius: 20px;
     margin: 0px 10px 0px 10px;
     padding: 10px 10px;
 }
 
 .popUpButton:hover{
     cursor: pointer;
-    background-color: #C0C0C0;
+    transform: scale(1.05);
 }
-
 
 
 #footer{

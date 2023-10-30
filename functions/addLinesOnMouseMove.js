@@ -24,8 +24,6 @@ const addLinesOnMouseMove = (mousePosition, particleArray, canvasContext) => {
             const dist = Math.sqrt(distx**2+disty**2)
                 
             if(dist < maxLineDistance ){
-                //const opacity = canvasConfig.mouseLines.opacity
-                //let opacity = (maxLineDistance-dist)*maxOpacity/maxLineDistance
                 let opacity = maxOpacity*Math.log(maxLineDistance - dist)/Math.log(maxLineDistance)
                 canvasContext.beginPath()
                 canvasContext.moveTo(particleArray[i].x, particleArray[i].y)
