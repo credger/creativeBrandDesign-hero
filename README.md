@@ -1,6 +1,6 @@
-# creativeBrandDesign-hero
+# Creative Brand Design - Hero
 
-Design by https://www.cbwebsitedesign.co.uk/
+Recreated from https://www.cbwebsitedesign.co.uk/
 
 Code by Clyde Redger
 
